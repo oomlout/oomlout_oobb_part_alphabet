@@ -1,0 +1,44 @@
+classification: oobb
+color: ''
+description_extra: top_style_o_letter_extra
+description_main: 5_width_1_height_6_mm_depth
+full_rotations:
+- 0
+- 0
+- 0
+full_shift:
+- 0
+- 0
+- 0
+id: oobb_part_alphabet_5_width_1_height_6_mm_depth_top_style_o_letter_extra
+id_oobb: oobb_part_oomlout_oobb_part_alphabet_alphabet_5_width_1_height_6_mm_depth_top_style_o_letter_extra
+kwargs:
+  extra: top_style_o_letter
+  filter: ''
+  height: 1
+  letter: o
+  modes:
+  - 3dpr
+  navigation: true
+  oomp_classification: oobb
+  oomp_color: ''
+  oomp_description_extra: top_style_o_letter_extra
+  oomp_description_main: 5_width_1_height_6_mm_depth
+  oomp_manufacturer: ''
+  oomp_mode: oobb
+  oomp_part_number: ''
+  oomp_run: true
+  oomp_size: alphabet
+  oomp_type: part
+  overwrite: true
+  style: top
+  thickness: 6
+  typ: all
+  type: oomlout_oobb_part_alphabet_alphabet
+  width: 5
+manufacturer: ''
+name: alphabet
+part_number: ''
+project_name: C:\gh\oomlout_oobb_part_alphabet
+size: alphabet
+type: part

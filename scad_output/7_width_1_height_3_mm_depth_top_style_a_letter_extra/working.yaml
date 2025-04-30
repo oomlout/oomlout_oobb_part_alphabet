@@ -33,6 +33,7 @@ kwargs:
   overwrite: true
   style: top
   thickness: 3
+  typ: all
   type: oomlout_oobb_part_alphabet_alphabet
   width: 7
 manufacturer: ''

@@ -27,7 +27,7 @@ def make_scad(**kwargs):
     #test = True
 
     if typ == "all":
-        filter = ""; save_type = "all"; navigation = True; overwrite = True; modes = ["3dpr"]; oomp_run = True; test = False
+        filter = ""; save_type = "all"; navigation = True; overwrite = True; modes = ["3dpr"]; oomp_run = False; test = False
         #default
         #filter = ""; save_type = "all"; navigation = True; overwrite = True; modes = ["3dpr"]; oomp_run = True; test = False
     elif typ == "fast":        
@@ -120,9 +120,19 @@ def make_scad(**kwargs):
         
 
         widths = [3,5,7,13]
-        letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".lower()        
-        #letters = "AIYU".lower()
+
+        #letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".lower()   
+        letters = "AIYU".lower()
+        #convert letters to an array
+        letters = list(letters)
+        letters.append("xs")     
+        letters.append("xl")     
+        letters.append("xxl")
+        letters.append("xxxl")
+        
+
         styles = ["top", "bottom"]  
+
         thicknesses = [1, 3, 6]
         #thicknesses = [1]
         for wid in widths:
@@ -176,7 +186,8 @@ def get_base(thing, **kwargs):
     style = kwargs.get("style", "")
 
     width_working = width - 2
-    text_size = width_working * 95/5
+    text_length = len(letter)
+    text_size = width_working * 95/5 / text_length
 
     # plate
     p3 = copy.deepcopy(kwargs)
@@ -206,13 +217,13 @@ def get_base(thing, **kwargs):
     elif style == "bottom":
         shift_y = 0
         if width == 3:
-            shift_y = width * 8
+            shift_y = width * 8 / (text_length *.80)
         if width == 5:
-            shift_y = width * 11
+            shift_y = width * 11 / (text_length * .8)
         if width == 7:
-            shift_y = width * 13
+            shift_y = width * 13 / text_length
         if width == 13:
-            shift_y = width * 14
+            shift_y = width * 14 / text_length
     
 
     p2 = copy.deepcopy(kwargs)
