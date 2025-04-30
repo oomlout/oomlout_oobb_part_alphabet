@@ -121,11 +121,11 @@ def make_scad(**kwargs):
 
         widths = [3,5,7,13]
 
-        #letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".lower()   
-        letters = "AIYU".lower()
+        letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".lower()   
+        #letters = "AIYU".lower()
         #convert letters to an array
         letters = list(letters)
-        letters = []
+        #letters = []
         letters.append("xs")     
         letters.append("xl")     
         letters.append("xxl")

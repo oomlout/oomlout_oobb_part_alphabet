@@ -27,7 +27,7 @@ kwargs:
   oomp_manufacturer: ''
   oomp_mode: oobb
   oomp_part_number: ''
-  oomp_run: true
+  oomp_run: false
   oomp_size: alphabet
   oomp_type: part
   overwrite: true
@@ -545,7 +545,7 @@ thing:
         height: 6
         pos:
         - 0
-        - 91
+        - 91.0
         - 0
         shape: text
         size: 95.0
@@ -569,7 +569,7 @@ thing:
     oomp_manufacturer: ''
     oomp_mode: oobb
     oomp_part_number: ''
-    oomp_run: true
+    oomp_run: false
     oomp_size: alphabet
     oomp_type: part
     overwrite: true
@@ -602,7 +602,7 @@ thing:
     oomp_manufacturer: ''
     oomp_mode: oobb
     oomp_part_number: ''
-    oomp_run: true
+    oomp_run: false
     oomp_size: alphabet
     oomp_type: part
     overwrite: true
@@ -618,8 +618,8 @@ thing:
     type: n
     width: 7
   components_string:
-  - oobb_plate_shape_p_type_6_depth_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_oobb_oomp_mode_true_oomp_run_7_width_1_height_6_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_h_letter_bottom_style_bottom_style_h_letter_extra
-  - oobb_holes_shape_n_type_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_oobb_oomp_mode_true_oomp_run_7_width_1_height_6_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_h_letter_bottom_style_bottom_style_h_letter_extra_'all'_holes_true_both_holes
+  - oobb_plate_shape_p_type_6_depth_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_oobb_oomp_mode_false_oomp_run_7_width_1_height_6_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_h_letter_bottom_style_bottom_style_h_letter_extra
+  - oobb_holes_shape_n_type_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_oobb_oomp_mode_false_oomp_run_7_width_1_height_6_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_h_letter_bottom_style_bottom_style_h_letter_extra_'all'_holes_true_both_holes
   description: oomlout oobb part alphabet alphabet 7x1x6
   description_extra: bottom_style_h_letter_extra
   description_main: 7_width_1_height_6_mm_depth

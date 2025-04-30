@@ -30,7 +30,7 @@ kwargs:
   oomp_run: false
   oomp_size: alphabet
   oomp_type: part
-  overwrite: false
+  overwrite: true
   style: top
   thickness: 1
   typ: all
@@ -57,7 +57,7 @@ thing:
       - 44
       - 14
       - 1
-      type: p
+      type: positive
       width: 3
   - - - - inclusion: laser
           pos:
@@ -262,7 +262,7 @@ thing:
         shape: text
         size: 19.0
         text: A
-        type: p
+        type: positive
         valign: top
         width: 3
   components_objects:
@@ -284,7 +284,7 @@ thing:
     oomp_run: false
     oomp_size: alphabet
     oomp_type: part
-    overwrite: false
+    overwrite: true
     pos:
     - 0
     - 0
@@ -317,7 +317,7 @@ thing:
     oomp_run: false
     oomp_size: alphabet
     oomp_type: part
-    overwrite: false
+    overwrite: true
     pos:
     - 0
     - 0
@@ -330,8 +330,8 @@ thing:
     type: n
     width: 3
   components_string:
-  - oobb_plate_shape_p_type_1_depth_all_typ_all_save_type_true_navigation_false_overwrite_'3dpr'_modes_oobb_oomp_mode_false_oomp_run_3_width_1_height_1_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_a_letter_top_style_top_style_a_letter_extra
-  - oobb_holes_shape_n_type_all_typ_all_save_type_true_navigation_false_overwrite_'3dpr'_modes_oobb_oomp_mode_false_oomp_run_3_width_1_height_1_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_a_letter_top_style_top_style_a_letter_extra_'all'_holes_true_both_holes
+  - oobb_plate_shape_p_type_1_depth_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_oobb_oomp_mode_false_oomp_run_3_width_1_height_1_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_a_letter_top_style_top_style_a_letter_extra
+  - oobb_holes_shape_n_type_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_oobb_oomp_mode_false_oomp_run_3_width_1_height_1_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_a_letter_top_style_top_style_a_letter_extra_'all'_holes_true_both_holes
   description: oomlout oobb part alphabet alphabet 3x1x1
   description_extra: top_style_a_letter_extra
   description_main: 3_width_1_height_1_mm_depth
