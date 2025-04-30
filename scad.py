@@ -20,8 +20,8 @@ def make_scad(**kwargs):
         typ = "fast"
         #typ = "manual"
 
-    oomp_mode = "project"
-    #oomp_mode = "oobb"
+    #oomp_mode = "project"
+    oomp_mode = "oobb"
 
     test = False
     #test = True
@@ -30,8 +30,8 @@ def make_scad(**kwargs):
         filter = ""; save_type = "all"; navigation = True; overwrite = True; modes = ["3dpr"]; oomp_run = True; test = False
         #default
         #filter = ""; save_type = "all"; navigation = True; overwrite = True; modes = ["3dpr"]; oomp_run = True; test = False
-    elif typ == "fast":
-        filter = ""; save_type = "none"; navigation = False; overwrite = True; modes = ["3dpr"]; oomp_run = False
+    elif typ == "fast":        
+        filter = ""; save_type = "none"; navigation = True; overwrite = True; modes = ["3dpr"]; oomp_run = False
         #default
         #filter = ""; save_type = "none"; navigation = False; overwrite = True; modes = ["3dpr"]; oomp_run = False
     elif typ == "manual":
@@ -118,20 +118,34 @@ def make_scad(**kwargs):
         part_default["full_shift"] = [0, 0, 0]
         part_default["full_rotations"] = [0, 0, 0]
         
-        part = copy.deepcopy(part_default)
-        p3 = copy.deepcopy(kwargs)
-        p3["width"] = 3
-        p3["height"] = 3
-        #p3["thickness"] = 6
-        #p3["extra"] = ""
-        part["kwargs"] = p3
-        nam = "base"
-        part["name"] = nam
-        if oomp_mode == "oobb":
-            p3["oomp_size"] = nam
-        if not test:
-            pass
-            #parts.append(part)
+
+        widths = [3,5,7,13]
+        letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".lower()        
+        #letters = "AIYU".lower()
+        styles = ["top", "bottom"]  
+        thicknesses = [1, 3, 6]
+        #thicknesses = [1]
+        for wid in widths:
+            for letter in letters:
+                for style in styles:
+                    for thick in thicknesses:
+                        part = copy.deepcopy(part_default)
+                        p3 = copy.deepcopy(kwargs)
+                        p3["width"] = wid
+                        #p3["height"] = 3
+                        p3["thickness"] = thick
+                        
+                        p3["letter"] = letter
+                        p3["style"] = style
+                        p3["extra"] = f"{style}_style_{letter}_letter"
+                        part["kwargs"] = p3
+                        nam = "alphabet"
+                        part["name"] = nam
+                        if oomp_mode == "oobb":
+                            p3["oomp_size"] = nam
+                        if not test:
+                            pass
+                            parts.append(part)
 
 
     kwargs["parts"] = parts
@@ -144,7 +158,8 @@ def make_scad(**kwargs):
         #sort.append("extra")
         sort.append("name")
         sort.append("width")
-        sort.append("height")
+        sort.append("letter")
+        sort.append("style")
         sort.append("thickness")
         
         scad_help.generate_navigation(sort = sort)
@@ -153,35 +168,67 @@ def make_scad(**kwargs):
 def get_base(thing, **kwargs):
 
     prepare_print = kwargs.get("prepare_print", False)
-    width = kwargs.get("width", 1)
-    height = kwargs.get("height", 1)
-    depth = kwargs.get("thickness", 3)                    
-    rot = kwargs.get("rot", [0, 0, 0])
-    pos = kwargs.get("pos", [0, 0, 0])
+    thickness = kwargs.get("thickness", 3)
+    width = kwargs.get("width", 7)    
+    th = thing["components"]
     extra = kwargs.get("extra", "")
-    
-    #add plate
-    p3 = copy.deepcopy(kwargs)
-    p3["type"] = "positive"
-    p3["shape"] = f"oobb_plate"    
-    p3["depth"] = depth
-    #p3["holes"] = True         uncomment to include default holes
-    #p3["m"] = "#"
-    pos1 = copy.deepcopy(pos)         
-    p3["pos"] = pos1
-    oobb_base.append_full(thing,**p3)
-    
-    #add holes seperate
+    letter = kwargs.get("letter", "")
+    style = kwargs.get("style", "")
+
+    width_working = width - 2
+    text_size = width_working * 95/5
+
+    # plate
     p3 = copy.deepcopy(kwargs)
     p3["type"] = "p"
-    p3["shape"] = f"oobb_holes"
-    p3["both_holes"] = True  
-    p3["depth"] = depth
-    p3["holes"] = "perimeter"
-    #p3["m"] = "#"
-    pos1 = copy.deepcopy(pos)         
-    p3["pos"] = pos1
-    oobb_base.append_full(thing,**p3)
+    p3["shape"] = "oobb_plate"
+    p3["depth"] = thickness
+    oobb_base.append_full(thing, **p3)
+    
+    # holes
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = "oobb_holes"
+    p3["height"] = 1
+    p3["holes"] = ["all"]
+    p3["both_holes"] = True
+    p3["m"] = "#"
+    oobb_base.append_full(thing, **p3)
+    # find the start point needs to be half the width_mm plus half oobb_basegv("osp")
+    
+
+    if style == "top":
+        shift_y = 0
+        if width == 3:
+            shift_y = -5
+        if width == 5:
+            shift_y = -5
+    elif style == "bottom":
+        shift_y = 0
+        if width == 3:
+            shift_y = width * 8
+        if width == 5:
+            shift_y = width * 11
+        if width == 7:
+            shift_y = width * 13
+        if width == 13:
+            shift_y = width * 14
+    
+
+    p2 = copy.deepcopy(kwargs)
+    p2["type"] = "p"
+    p2["shape"] = "text"
+    p2["text"] = letter.upper()
+    p2["size"] = text_size
+    p2["pos"] = [0,shift_y,0]
+    p2["height"] = thickness
+    p2["valign"] = "top"
+    p2["halign"] = "center"
+    p2["font"] = "DejaVu Sans Mono:style=Bold"
+    thinga = oobb_base.oe(**p2)
+    th.append(thinga)
+
+    
 
     if prepare_print:
         #put into a rotation object
@@ -209,7 +256,61 @@ def get_base(thing, **kwargs):
         p3["pos"] = pos1
         #p3["m"] = "#"
         oobb_base.append_full(thing,**p3)
+
+
+def get_bunting_alphabet(**kwargs):
+   
+    thickness = kwargs.get("thickness", 3)
+    width = kwargs.get("width", 7)
+    thing = oobb_base.get_default_thing(**kwargs)    
+    th = thing["components"]
+    extra = kwargs.get("extra", "")
+
+    width_working = width - 2
+    text_size = width_working * 95/5
+
+    # plate
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "p"
+    p3["shape"] = "oobb_plate"
+    p3["depth"] = thickness
+    oobb_base.append_full(thing, **p3)
     
+    # holes
+    p3 = copy.deepcopy(kwargs)
+    p3["type"] = "n"
+    p3["shape"] = "oobb_holes"
+    p3["height"] = 1
+    p3["holes"] = ["all"]
+    p3["both_holes"] = True
+    p3["m"] = "#"
+    oobb_base.append_full(thing, **p3)
+    # find the start point needs to be half the width_mm plus half oobb_basegv("osp")
+    
+
+
+    shift_y = 0
+    if width == 3:
+        shift_y = -5
+    if width == 5:
+        shift_y = -5
+
+    p2 = copy.deepcopy(kwargs)
+    p2["type"] = "p"
+    p2["shape"] = "text"
+    p2["text"] = extra.upper()
+    p2["size"] = text_size
+    p2["pos"] = [0,shift_y,0]
+    p2["height"] = thickness
+    p2["valign"] = "top"
+    p2["halign"] = "center"
+    p2["font"] = "DejaVu Sans Mono:style=Bold"
+    thinga = oobb_base.oe(**p2)
+    th.append(thinga)
+
+
+    return thing 
+
 if __name__ == '__main__':
     kwargs = {}
     main(**kwargs)

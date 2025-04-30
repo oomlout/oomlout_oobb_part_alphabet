@@ -1,0 +1,357 @@
+classification: oobb
+color: ''
+description_extra: bottom_style_l_letter_extra
+description_main: 3_width_1_height_6_mm_depth
+full_rotations:
+- 0
+- 0
+- 0
+full_shift:
+- 0
+- 0
+- 0
+id: oobb_part_alphabet_3_width_1_height_6_mm_depth_bottom_style_l_letter_extra
+id_oobb: oobb_part_oomlout_oobb_part_alphabet_alphabet_3_width_1_height_6_mm_depth_bottom_style_l_letter_extra
+kwargs:
+  extra: bottom_style_l_letter
+  filter: ''
+  height: 1
+  letter: l
+  modes:
+  - 3dpr
+  navigation: true
+  oomp_classification: oobb
+  oomp_color: ''
+  oomp_description_extra: bottom_style_l_letter_extra
+  oomp_description_main: 3_width_1_height_6_mm_depth
+  oomp_manufacturer: ''
+  oomp_mode: oobb
+  oomp_part_number: ''
+  oomp_run: true
+  oomp_size: alphabet
+  oomp_type: part
+  overwrite: true
+  style: bottom
+  thickness: 6
+  typ: all
+  type: oomlout_oobb_part_alphabet_alphabet
+  width: 3
+manufacturer: ''
+name: alphabet
+part_number: ''
+project_name: C:\gh\oomlout_oobb_part_alphabet
+size: alphabet
+thing:
+  classification: oobb
+  color: ''
+  components:
+  - - depth: 6
+      extra: bottom_style_l_letter
+      height: 1
+      pos:
+      - 0
+      - 0
+      - 0
+      shape: rounded_rectangle
+      size:
+      - 44
+      - 14
+      - 6
+      type: positive
+      width: 3
+  - - - - inclusion: laser
+          pos:
+          - -15.0
+          - 0.0
+          - 0
+          r: 3.0
+          shape: hole
+          type: negative
+    - - - inclusion: laser
+          pos:
+          - 0.0
+          - 0.0
+          - 0
+          r: 3.0
+          shape: hole
+          type: negative
+    - - - inclusion: laser
+          pos:
+          - 15.0
+          - 0.0
+          - 0
+          r: 3.0
+          shape: hole
+          type: negative
+    - - - inclusion: 3dpr
+          pos:
+          - -15.0
+          - 0.0
+          - 0
+          r: 3.25
+          shape: hole
+          type: negative
+    - - - inclusion: 3dpr
+          pos:
+          - 0.0
+          - 0.0
+          - 0
+          r: 3.25
+          shape: hole
+          type: negative
+    - - - inclusion: 3dpr
+          pos:
+          - 15.0
+          - 0.0
+          - 0
+          r: 3.25
+          shape: hole
+          type: negative
+    - - - inclusion: 'true'
+          pos:
+          - -15.0
+          - 0.0
+          - 0
+          r: 3.0
+          shape: hole
+          type: negative
+    - - - inclusion: 'true'
+          pos:
+          - 0.0
+          - 0.0
+          - 0
+          r: 3.0
+          shape: hole
+          type: negative
+    - - - inclusion: 'true'
+          pos:
+          - 15.0
+          - 0.0
+          - 0
+          r: 3.0
+          shape: hole
+          type: negative
+    - - - inclusion: laser
+          pos:
+          - -15.0
+          - 0.0
+          - 0
+          r: 1.5
+          shape: hole
+          type: negative
+    - - - inclusion: laser
+          pos:
+          - -7.5
+          - 0.0
+          - 0
+          r: 1.5
+          shape: hole
+          type: negative
+    - - - inclusion: laser
+          pos:
+          - 0.0
+          - 0.0
+          - 0
+          r: 1.5
+          shape: hole
+          type: negative
+    - - - inclusion: laser
+          pos:
+          - 7.5
+          - 0.0
+          - 0
+          r: 1.5
+          shape: hole
+          type: negative
+    - - - inclusion: laser
+          pos:
+          - 15.0
+          - 0.0
+          - 0
+          r: 1.5
+          shape: hole
+          type: negative
+    - - - inclusion: 3dpr
+          pos:
+          - -15.0
+          - 0.0
+          - 0
+          r: 1.8
+          shape: hole
+          type: negative
+    - - - inclusion: 3dpr
+          pos:
+          - -7.5
+          - 0.0
+          - 0
+          r: 1.8
+          shape: hole
+          type: negative
+    - - - inclusion: 3dpr
+          pos:
+          - 0.0
+          - 0.0
+          - 0
+          r: 1.8
+          shape: hole
+          type: negative
+    - - - inclusion: 3dpr
+          pos:
+          - 7.5
+          - 0.0
+          - 0
+          r: 1.8
+          shape: hole
+          type: negative
+    - - - inclusion: 3dpr
+          pos:
+          - 15.0
+          - 0.0
+          - 0
+          r: 1.8
+          shape: hole
+          type: negative
+    - - - inclusion: 'true'
+          pos:
+          - -15.0
+          - 0.0
+          - 0
+          r: 1.5
+          shape: hole
+          type: negative
+    - - - inclusion: 'true'
+          pos:
+          - -7.5
+          - 0.0
+          - 0
+          r: 1.5
+          shape: hole
+          type: negative
+    - - - inclusion: 'true'
+          pos:
+          - 0.0
+          - 0.0
+          - 0
+          r: 1.5
+          shape: hole
+          type: negative
+    - - - inclusion: 'true'
+          pos:
+          - 7.5
+          - 0.0
+          - 0
+          r: 1.5
+          shape: hole
+          type: negative
+    - - - inclusion: 'true'
+          pos:
+          - 15.0
+          - 0.0
+          - 0
+          r: 1.5
+          shape: hole
+          type: negative
+  - - - extra: bottom_style_l_letter
+        font: DejaVu Sans Mono:style=Bold
+        halign: center
+        height: 6
+        pos:
+        - 0
+        - 24
+        - 0
+        shape: text
+        size: 19.0
+        text: L
+        type: positive
+        valign: top
+        width: 3
+  components_objects:
+  - depth: 6
+    extra: bottom_style_l_letter
+    filter: ''
+    height: 1
+    letter: l
+    modes:
+    - 3dpr
+    navigation: true
+    oomp_classification: oobb
+    oomp_color: ''
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: oobb
+    oomp_part_number: ''
+    oomp_run: true
+    oomp_size: alphabet
+    oomp_type: part
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 0
+    save_type: all
+    shape: oobb_plate
+    style: bottom
+    thickness: 6
+    typ: all
+    type: p
+    width: 3
+  - both_holes: true
+    extra: bottom_style_l_letter
+    filter: ''
+    height: 1
+    holes:
+    - all
+    letter: l
+    m: '#'
+    modes:
+    - 3dpr
+    navigation: true
+    oomp_classification: oobb
+    oomp_color: ''
+    oomp_description_extra: ''
+    oomp_description_main: ''
+    oomp_manufacturer: ''
+    oomp_mode: oobb
+    oomp_part_number: ''
+    oomp_run: true
+    oomp_size: alphabet
+    oomp_type: part
+    overwrite: true
+    pos:
+    - 0
+    - 0
+    - 0
+    save_type: all
+    shape: oobb_holes
+    style: bottom
+    thickness: 6
+    typ: all
+    type: n
+    width: 3
+  components_string:
+  - oobb_plate_shape_p_type_6_depth_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_oobb_oomp_mode_true_oomp_run_3_width_1_height_6_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_l_letter_bottom_style_bottom_style_l_letter_extra
+  - oobb_holes_shape_n_type_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_oobb_oomp_mode_true_oomp_run_3_width_1_height_6_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_l_letter_bottom_style_bottom_style_l_letter_extra_'all'_holes_true_both_holes
+  description: oomlout oobb part alphabet alphabet 3x1x6
+  description_extra: bottom_style_l_letter_extra
+  description_main: 3_width_1_height_6_mm_depth
+  extra: bottom_style_l_letter
+  folder: C:\gh\oomlout_oobb_version_4_generated_parts\parts\oobb_part_oomlout_oobb_part_alphabet_alphabet_3_width_1_height_6_mm_depth_bottom_style_l_letter_extra
+  height: 1
+  height_mm: 14
+  id: oobb_part_oomlout_oobb_part_alphabet_alphabet_3_width_1_height_6_mm_depth_bottom_style_l_letter_extra
+  link_main: https://github.com/oomlout/oomlout_oobb_version_4_generated_parts/tree/main/navigation_oomp/oobb/part/oomlout_oobb_part_alphabet_alphabet/3_width_1_height_6_mm_depth/bottom_style_l_letter_extra/part
+  link_redirect: https://github.com/oomlout/oomlout_oobb_version_4_generated_parts/tree/main/parts/oobb_oomlout_oobb_part_alphabet_alphabet_03_01_06_ex_bottom_style_l_letter
+  manufacturer: ''
+  name: Oobb Part Oomlout Oobb Part Alphabet Alphabet 3 Width 1 Height 6 mm Depth
+    Bottom Style L Letter Extra
+  name_short: Oomlout Alphabet Alphabet 3x1x6 Bottom
+  part_number: ''
+  short_name: ''
+  size: oomlout_oobb_part_alphabet_alphabet
+  thickness: 6
+  thickness_mm: 6
+  type: part
+  width: 3
+  width_mm: 44
+type: part
