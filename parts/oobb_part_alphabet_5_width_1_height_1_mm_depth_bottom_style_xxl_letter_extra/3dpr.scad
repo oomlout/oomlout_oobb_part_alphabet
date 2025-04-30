@@ -17,7 +17,7 @@ difference() {
 				cylinder(h = 1, r = 5);
 			}
 		}
-		translate(v = [0, 22.9166666667, 0]) {
+		translate(v = [0, 20.3703703704, 0]) {
 			linear_extrude(height = 1) {
 				text(font = "DejaVu Sans Mono:style=Bold", halign = "center", size = 19.0000000000, text = "XXL", valign = "top");
 			}

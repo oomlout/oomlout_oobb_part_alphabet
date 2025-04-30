@@ -125,6 +125,7 @@ def make_scad(**kwargs):
         letters = "AIYU".lower()
         #convert letters to an array
         letters = list(letters)
+        letters = []
         letters.append("xs")     
         letters.append("xl")     
         letters.append("xxl")
@@ -219,7 +220,7 @@ def get_base(thing, **kwargs):
         if width == 3:
             shift_y = width * 8 / (text_length *.80)
         if width == 5:
-            shift_y = width * 11 / (text_length * .8)
+            shift_y = width * 11 / (text_length * .9)
         if width == 7:
             shift_y = width * 13 / text_length
         if width == 13:
