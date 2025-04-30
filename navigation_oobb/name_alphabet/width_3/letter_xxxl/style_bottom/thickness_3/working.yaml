@@ -30,7 +30,7 @@ kwargs:
   oomp_run: false
   oomp_size: alphabet
   oomp_type: part
-  overwrite: false
+  overwrite: true
   style: bottom
   thickness: 3
   typ: all

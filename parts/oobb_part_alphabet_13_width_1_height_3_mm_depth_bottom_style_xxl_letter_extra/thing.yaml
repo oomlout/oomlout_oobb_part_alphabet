@@ -30,7 +30,7 @@ kwargs:
   oomp_run: false
   oomp_size: alphabet
   oomp_type: part
-  overwrite: false
+  overwrite: true
   style: bottom
   thickness: 3
   typ: all
@@ -1004,7 +1004,7 @@ thing:
     oomp_run: false
     oomp_size: alphabet
     oomp_type: part
-    overwrite: false
+    overwrite: true
     pos:
     - 0
     - 0
@@ -1037,7 +1037,7 @@ thing:
     oomp_run: false
     oomp_size: alphabet
     oomp_type: part
-    overwrite: false
+    overwrite: true
     pos:
     - 0
     - 0
@@ -1050,8 +1050,8 @@ thing:
     type: n
     width: 13
   components_string:
-  - oobb_plate_shape_p_type_3_depth_all_typ_all_save_type_true_navigation_false_overwrite_'3dpr'_modes_oobb_oomp_mode_false_oomp_run_13_width_1_height_3_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_xxl_letter_bottom_style_bottom_style_xxl_letter_extra
-  - oobb_holes_shape_n_type_all_typ_all_save_type_true_navigation_false_overwrite_'3dpr'_modes_oobb_oomp_mode_false_oomp_run_13_width_1_height_3_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_xxl_letter_bottom_style_bottom_style_xxl_letter_extra_'all'_holes_true_both_holes
+  - oobb_plate_shape_p_type_3_depth_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_oobb_oomp_mode_false_oomp_run_13_width_1_height_3_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_xxl_letter_bottom_style_bottom_style_xxl_letter_extra
+  - oobb_holes_shape_n_type_all_typ_all_save_type_true_navigation_true_overwrite_'3dpr'_modes_oobb_oomp_mode_false_oomp_run_13_width_1_height_3_thickness_oobb_oomp_classification_part_oomp_type_alphabet_oomp_size_xxl_letter_bottom_style_bottom_style_xxl_letter_extra_'all'_holes_true_both_holes
   description: oomlout oobb part alphabet alphabet 13x1x3
   description_extra: bottom_style_xxl_letter_extra
   description_main: 13_width_1_height_3_mm_depth
